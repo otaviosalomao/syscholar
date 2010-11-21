@@ -1,0 +1,1 @@
+mysqldump -u$1 -p$2 -xe --default-character-set=utf8 -c syscholar_development > "db_syscholar-`date +%Y%m%d%H%M`.sql"
