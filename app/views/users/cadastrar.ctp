@@ -1,12 +1,14 @@
 <div class="cadastrar">
-    <?= $form->create("User", array("action" => "cadastrar", 'class' => 'form')); ?>
-    <?= $form->input('nome', array('value' => '', 'class'=>'input-text')); ?>
-    <?= $form->input('email', array('value' => '', 'class'=>'input-text')); ?>
-    <?= $form->input('telefone', array('value' => '', 'class'=>'input-text')); ?>
-    <?= $form->input('endereco', array('value' => '', 'class'=>'input-text')); ?>
-    <?= $form->input('data_nascimento', array('value' => '')); ?>
-    <?= $form->input('sexo', array('value' => '')); ?>
-    <?= $form->input('senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
-    <?= $form->input('confirmar_senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
-    <?= $form->end("Entrar"); ?>
+    <fieldset><legend>Cadastro de Usuário</legend>
+        <?= $form->create("User", array("action" => "cadastrar", 'class' => 'form')); ?>
+        <?= $form->input('nome', array('value' => '', 'class'=>'input-text')); ?>
+        <?= $form->input('email', array('value' => '', 'class'=>'input-text')); ?>
+        <?= $form->input('telefone', array('value' => '', 'class'=>'input-text')); ?>
+        <?= $form->input('endereco', array('value' => '', 'class'=>'input-text')); ?>
+        <?= $form->input('data_nascimento', array('value' => '')); ?>
+        <?= $form->input('sexo', array('value' => '')); ?>
+        <?= $form->input('senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
+        <?= $form->input('confirmar_senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
+        <?= $form->end("Entrar"); ?>
+    </fieldset>
 </div>
