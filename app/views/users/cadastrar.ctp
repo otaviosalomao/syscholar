@@ -1,5 +1,5 @@
 <div class="cadastrar">
-    <fieldset><legend>Cadastro de Usuário</legend>
+    <h1>Cadastre-se</h1>
         <?= $form->create("User", array("action" => "cadastrar", 'class' => 'form')); ?>
         <?= $form->input('nome', array('value' => '', 'class'=>'input-text')); ?>
         <?= $form->input('email', array('value' => '', 'class'=>'input-text')); ?>
@@ -10,5 +10,5 @@
         <?= $form->input('senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
         <?= $form->input('confirmar_senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
         <?= $form->end("Entrar"); ?>
-    </fieldset>
+
 </div>
