@@ -12,7 +12,7 @@
 		'onfocus' => 'if (this.value=="senha") { this.value=""; this.type="password" }',
 		'onblur' => 'if (this.value=="") { this.value="senha"; this.type="text" }'));?>
 	<!--<![endif]-->
-<?= $form->button('entrar >', array('onclick' => 'this.form.submit()'));?>
+<?= $form->button('entrar', array('onclick' => 'this.form.submit()', 'class'=>'input-submit'));?>
 <?= $form->end(null); ?>
 <strong><?= $html->link("cadastre-se", array('controller' => 'users', 'action' => 'cadastrar')) ?></strong>
 
