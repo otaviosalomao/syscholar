@@ -15,6 +15,7 @@
         echo $html->css('1col');
         echo $html->css('main-ie6');
         echo $html->css('style');
+        echo $html->css('syscholar');
         echo $html->script('jquery.');
         echo $html->script('switcher.js');
         echo $html->script('toggle.js');
