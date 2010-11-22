@@ -5,10 +5,10 @@
         <?= $form->input('email', array('value' => '', 'class'=>'input-text')); ?>
         <?= $form->input('telefone', array('value' => '', 'class'=>'input-text')); ?>
         <?= $form->input('endereco', array('value' => '', 'class'=>'input-text')); ?>
-        <?= $form->input('data_nascimento', array('value' => '', 'class'=>'input-text')); ?>
-        <?= $form->radio('sexo',array('M'=>'Masculino', 'F'=>'Feminino'), array('legend'=>false, 'type' => 'radio')); ?>
+        <?= $form->input('data_nascimento', array('type'=>'text', 'class'=>'input-text')); ?><br/>
+        <div><label>Sexo</label></div><?= $form->radio('sexo',array('M'=>'Masculino', 'F'=>'Feminino'), array('legend'=>false, 'type' => 'radio')); ?><br/><br/>
         <?= $form->input('senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
         <?= $form->input('confirmar_senha', array('value' => '', 'type' => 'password', 'class'=>'input-text')); ?>
-        <?= $form->end("Entrar"); ?>
+        <?= $form->button('Enviar',array('type' => 'submit', 'class'=>'input-submit')); ?>
 
 </div>

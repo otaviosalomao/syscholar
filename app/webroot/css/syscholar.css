@@ -3,16 +3,22 @@
   padding: 10px;
   margin: 0;
 }
-div > label {
-    display: block; 
+
+#form-area input[type='text'], input[type='password']{
+
+   margin:5px 0 0 10px;
+   width: 200px;
+}
+
+button{
+    margin:5px 0 0 160px;
+}
+
+#form-area div > label {
+    display: block;
     float: left;
     width: 150px;
     padding: 0;
     margin: 5px 0 0;
     text-align: right;
-}
-
-#form-area input{
-
-   margin:5px 0 0 10px;
 }
