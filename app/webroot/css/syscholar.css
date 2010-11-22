@@ -4,10 +4,9 @@
   margin: 0;
 }
 
-#form-area input[type='text'], input[type='password']{
+#form-area input{
 
    margin:5px 0 0 10px;
-   width: 200px;
 }
 
 button{
