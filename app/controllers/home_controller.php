@@ -2,17 +2,18 @@
 class HomeController extends AppController {
 
     var $components = array('Auth','Acl');
+    var $helpers = array('Form', 'Javascript', 'Session');
     var $name = 'Home';
     var $uses = null;
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('index');
-        $this->Session = new SessionComponent();
+        $this->Auth->allow('index');
     }
 
     function index() {
-        debug($this->Session->read());  
+        $this->Session = new SessionComponent();
+        debug($this->Session->read());
         $this->layout= 'default';
     }
 

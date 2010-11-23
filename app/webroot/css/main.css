@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, address, blockquote, dl, fieldset, ol, p, table, ul {mar
 #content dl {clear:both;}
 #content dl dt {font-weight:bold;}
 #content dl dd {margin:0 0 5px 0;}
-#content fieldset {position:relative; margin:10px 0; padding:10px;}
+#content fieldset {position:relative; padding:0 0 0 150px;}
 #content legend {font-size:120%; font-weight:bold;}
 #content code {font-family:"",monospace;}
 #content .help {cursor:help;}

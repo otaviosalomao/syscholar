@@ -301,3 +301,5 @@
  *
  */
 	Cache::config('default', array('engine' => 'File'));
+
+        date_default_timezone_set('America/Boa_Vista');

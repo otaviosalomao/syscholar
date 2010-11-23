@@ -19,8 +19,7 @@ a:hover, a:active, a:focus {color:#df0000;}
 #content table td {border:1px solid #cfcfcf;}
 #content table tr.bg td {background-color:#e8f6ff;}
 #content dl dt {color:#df0000;}
-#content fieldset {border:1px solid #ccc;}
-#content legend {background:#FFF; color:#0085cc;}
+#content legend {background:#FFF; color:#0085cc; padding: 0 0 0 0px}
 #content acronym, #content abbr, #content .help {border-bottom:1px dotted #cfcfcf;}
 
 /* =============================================================================

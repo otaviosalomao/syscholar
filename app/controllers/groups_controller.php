@@ -3,11 +3,24 @@ class GroupsController extends AppController {
 
     var $name = 'Groups';
     var $components = array('Auth', 'Acl');
+    var $helpers = array('Session');
 
   function beforeFilter() {
     	$this->autoRender = false;
         $this->_autenticacao();
         parent::beforeFilter();
+        $this->Auth->allowedActions = array('cadastrar', 'build_acl', 'initDB');        
+    }
+
+  function cadastrar() {
+        $this->autoRender = true;
+        $this->layout = 'default';        
+        if(!empty($this->data)) {
+            if($this->Group->save($this->data))
+                $this->Session->setFlash('Grupo cadastrado com sucesso');
+            else
+                $this->Session->setFlash('Grupo não cadastrado');
+        }
     }
 
     function build_acl() {
