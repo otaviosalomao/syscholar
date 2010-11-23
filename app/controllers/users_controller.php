@@ -22,10 +22,7 @@ class UsersController extends AppController {
 
     function cadastrar() {
         $this->Session = new SessionComponent();
-        if(!empty($this->data)) {
-            $senha = $this->User->gerarSenha();
-            $this->data['User']['senha'] = $senha['User']['senha'];
-            $this->data['User']['confirmar_senha'] = $senha['User']['confirmar_senha'];
+        if(!empty($this->data)) {            
             $this->data['User']['group_id'] = 2;
             if($this->User->save($this->data)) {
                 $this->Session->setFlash("Cadastro realizado com sucesso");

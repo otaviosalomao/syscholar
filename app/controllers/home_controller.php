@@ -12,8 +12,7 @@ class HomeController extends AppController {
     }
 
     function index() {
-        $this->Session = new SessionComponent();
-        debug($this->Session->read());
+        $this->Session = new SessionComponent();        
         $this->layout= 'default';
     }
 
