@@ -46,7 +46,13 @@
                 <div id="aside" class="box">
                     <div class="padding box">
                         <p id="logo"><a href="/home"><img src="/images/estudante.jpg" alt="Our logo" title="Visit Site"></a></p>
-                        <ul class="box">				
+                        <form action="#" method="get" id="search">
+                            <fieldset>
+                                <legend>Busca</legend>
+                                <p><input type="text" size="17" name="" class="input-text">&nbsp;<input type="submit" value="OK" class="input-submit-02"><br>                                    
+                            </fieldset>
+                        </form>
+                        <ul class="box">
                             <li id="submenu-active"><a href="#">Active Page</a> <!-- Active -->
                                 <ul>
                                     <li><a href="#">Lorem ipsum</a></li>
