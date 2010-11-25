@@ -72,6 +72,12 @@ OTHERS
 .high {color:#df0000;}
 .high-bg {background:#FFB;}
 .low {color:#707070;}
+.width-30{width:30px}
+.width-40{width:40px}
+.width-50{width:50px}
+.width-60{width:60px}
+.width-70{width:70px}
+.width-80{width:80px}
 
 /* =============================================================================
 MESSAGES
@@ -80,8 +86,10 @@ MESSAGES
 .msg.warning {border:2px solid #F2DD8C; background-color:#FFF5CC;}
 .msg.warning a {color:#df0000;} .msg.warning a:hover, .msg.warning a:active, .msg.warning a:focus {color:#303030;}
 .msg.info {border:2px solid #B8E2FB; background-color:#E8F6FF;}
-.msg.done {border:2px solid #BBDF8D; background-color:#EAF7D9;}
+#flashMessage {border:2px solid #BBDF8D; background-color:#EAF7D9;}
 .error-message {border:2px solid #FFAEAE; background-color:#FEEBEB;}
+.btn-excluir  {background:url("../images/ico-delete.gif"); width: 22px}
+.btn-editar   {background:url("../images/ico-done.gif"); width: 22px}
 
 .pedido-opcoes {
     overflow:hidden;

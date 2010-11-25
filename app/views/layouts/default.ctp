@@ -6,8 +6,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="en" />
         <meta name="robots" content="noindex,nofollow" />
-        <?= $html->css(array('reset', 'main', '2col', 'main-ie6','syscholar', 'style'));?>
-        <?= $html->script(array('script.js', 'ui.tabs.js', 'ui.core.js', 'toggle.js', 'switcher.js', 'jquery.js'))?>
+        <?= $html->css(array('reset', 'main', '2col', 'main-ie6','syscholar', 'style'));?>       
     </head>
     <body>
         <div id="main">
@@ -78,8 +77,3 @@
         </div>
     </body>
 </html>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".tabs > ul").tabs();
-    });
-</script>

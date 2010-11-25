@@ -2,7 +2,7 @@
 class ProvasController extends AppController {
 
 	var $name = 'Provas';
-        var $helpers = array('Javascript');
+        var $helpers = array('Javascript', 'Paginas');
 
         function cadastrar($id=null) {
 		if(!empty($this->data)) {

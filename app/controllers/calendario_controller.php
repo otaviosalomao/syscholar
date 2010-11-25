@@ -3,6 +3,7 @@ class CalendarioController extends AppController {
 
     var $name = 'Calendario';
     var $helpers = array('Javascript');
+    var $uses = array('Trabalho', 'Prova', 'Compromisso', 'Tarefas');
 
     function cadastrar($id=null) {
         if(!empty($this->data)) {
