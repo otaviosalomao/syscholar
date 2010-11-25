@@ -24,8 +24,8 @@ code {font-size:105%;}
 OTHERS
 ============================================================================= */
 
-#aside ul li#submenu-active a {width:228px;}
-#aside ul li a, #aside ul ul li a, #aside ul li#submenu-active ul li a {width:215px;}
+#aside ul li#submenu-active a {width:175px;}
+#aside ul li a, #aside ul ul li a, #aside ul li#submenu-active ul li a {width:120px;}
 #aside #btn-create a span {width:175px; background-position:0 0;}
 #aside #search fieldset .input-text {width:145px;}
 #content .col33.center {width:36%;}

@@ -46,6 +46,18 @@
                 <div id="aside" class="box">
                     <div class="padding box">
                         <p id="logo"><a href="/home"><img src="/images/estudante.jpg" alt="Our logo" title="Visit Site"></a></p>
+                        <ul class="box">				
+                            <li id="submenu-active"><a href="#">Active Page</a> <!-- Active -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
                 <div id="content" class="box">

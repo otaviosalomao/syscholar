@@ -60,7 +60,7 @@ OTHERS
 #aside ul li a {border-bottom:1px solid #cfcfcf; color:#303030;}
 #aside ul li#submenu-active a {background-color:#df0000; color:#fff;}
 #aside ul li a:hover, #aside ul li a:active, #aside ul li a:focus {color:#df0000;}
-#aside ul ul li a, #aside ul li#submenu-active ul li a {border-bottom:1px solid #cfcfcf; background-color:#f5f5f5; color:#303030;}
+#aside ul ul li a, #aside ul li#submenu-active ul li a {border-bottom:1px solid #cfcfcf; color:#303030;}
 #aside ul li ul li a {background-color:#e3e3e3;}
 #aside ul ul li a:hover, #aside ul ul li a:active, #aside ul ul li a:focus, #aside ul li#submenu-active ul li a:hover, #aside ul li#submenu-active ul li a:active, #aside ul li#submenu-active ul li a:focus {color:#df0000;}
 #content h1 {background-color:#303030; color:#fff;}
@@ -115,3 +115,6 @@ MESSAGES
     margin:4px 3px 0 10px;
 }
 
+.box {
+    padding: 0
+}

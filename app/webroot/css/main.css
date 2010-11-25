@@ -95,7 +95,7 @@ OTHERS
 #aside ul {width:215px; margin:0 0 15px 0; list-style:none;}
 #aside ul li {display:inline;}
 #aside ul li a {display:block; width:185px; padding:4px 15px; text-decoration:none;}
-#aside ul li#submenu-active a {width:198px; border:0; background:url("../images/submenu-active.gif") 100% 50% no-repeat; font-weight:bold; z-index:999;}
+#aside ul li#submenu-active a {width:198px; border:0; font-weight:bold; z-index:999;}
 #aside ul ul {margin:0; position:static;}
 #aside ul ul li a, #aside ul li#submenu-active ul li a {width:170px; padding:5px 15px 5px 30px; background:url("../images/submenu-sub.gif") 15px 7px no-repeat; font:85%/1.2 "tahoma",sans-serif; font-weight:normal;}
 #content h1 {margin:0; padding:10px 15px; background:url("../images/content-h1.gif") 0 0 repeat-x; letter-spacing:-1px;}
