@@ -2,3 +2,4 @@ tmp/*
 config/database.php
 app/tmp/*
 app/config/database.php
+nbproject/private/private.xml
