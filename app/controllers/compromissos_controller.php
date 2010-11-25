@@ -1,7 +1,7 @@
 <?php
-class MateriasController extends AppController {
+class CompromissosController extends AppController {
 
-	var $name = 'Materias';
+	var $name = 'Compromissos';
         var $helpers = array('Javascript');
 	
 	function cadastrar($id=null) {

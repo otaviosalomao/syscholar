@@ -32,6 +32,9 @@ class User extends AppModel {
         $data = $this->data;
         $user = $this->findById($this->id);
         return array('Group' => array('id' => $user['User']['group_id']));
-    }    
+    }
+
+    
+
 }
 ?>

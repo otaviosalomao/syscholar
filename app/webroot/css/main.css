@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, address, blockquote, dl, fieldset, ol, p, table, ul {mar
 #content dl {clear:both;}
 #content dl dt {font-weight:bold;}
 #content dl dd {margin:0 0 5px 0;}
-#content fieldset {position:relative; padding:0 0 0 150px;}
+#content fieldset {position:relative; padding:0 0 0 150px; margin: 0;}
 #content legend {font-size:120%; font-weight:bold;}
 #content code {font-family:"",monospace;}
 #content .help {cursor:help;}
@@ -53,7 +53,10 @@ dl.nostyle dd {margin:0 !important;}
 LAYOUT
 ============================================================================= */
 
-#main {min-width:980px; width:expression(document.body.clientWidth < 980? "980px" : "auto" );}
+#main {  margin: 0 auto;
+    background-color: #fff;
+    width: 980px;
+    text-align: left;}
 #tray {padding:12px 15px; background:url("../images/tray.gif") 0 0 repeat-x; font:85%/1.2 "tahoma",sans-serif;}
 #tray p {margin:0;}
 #tray p.f-left {width:50%;}

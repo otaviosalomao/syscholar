@@ -1,8 +1,8 @@
-<h3 class="tit">Materias</h3>
+<h3 class="tit">Compromissos</h3>
 <div class="tabs box">
     <ul class="ui-tabs-nav">
-        <li class="ui-tabs-selected"><a href="#tab01"><span>Listar Materias</span></a></li>
-        <li class=""><a href="#tab02"><span>Cadastrar Materia</span></a></li>
+        <li class="ui-tabs-selected"><a href="#tab01"><span>Listar Compromissos</span></a></li>
+        <li class=""><a href="#tab02"><span>Cadastrar Compromisso</span></a></li>
     </ul>
 </div>
 <div id="tab01" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">

@@ -1,0 +1,8 @@
+<?
+class MateriasHelpers extends AppHelper {
+    function listarMaterias() {
+        $materias = $this->Materias->find('list');
+        return array_values($materias);
+    }
+}
+?>

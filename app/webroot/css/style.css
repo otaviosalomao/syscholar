@@ -19,7 +19,7 @@ a:hover, a:active, a:focus {color:#df0000;}
 #content table td {border:1px solid #cfcfcf;}
 #content table tr.bg td {background-color:#e8f6ff;}
 #content dl dt {color:#df0000;}
-#content legend {background:#FFF; color:#0085cc; padding: 0 0 0 0px}
+#content legend {background:#FFF; color:#0085cc; padding: 0 0 0 0px; margin: 5px 0 0 10px}
 #content acronym, #content abbr, #content .help {border-bottom:1px dotted #cfcfcf;}
 
 /* =============================================================================
@@ -82,3 +82,36 @@ MESSAGES
 .msg.info {border:2px solid #B8E2FB; background-color:#E8F6FF;}
 .msg.done {border:2px solid #BBDF8D; background-color:#EAF7D9;}
 .msg.error {border:2px solid #FFAEAE; background-color:#FEEBEB;}
+
+.pedido-opcoes {
+    overflow:hidden;
+}
+
+.pedido-opcoes h3  {
+    display:inline;
+    float:left;
+    margin-top:0;
+    padding: 0 0 0 95px;
+}
+
+.topo .radio{
+    display:inline;
+    float:left;
+
+    font-size:14px;
+    padding:2px 0 0;
+}
+
+.topo label{    
+    text-align: left;
+    width: 69px;
+}
+
+.pedido-opcoes label{
+    margin:4px 0 0 1px;
+}
+
+.radio {
+    margin:4px 3px 0 10px;
+}
+

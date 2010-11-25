@@ -1,10 +1,10 @@
 <?php
-class TarefasController extends AppController {
+class CalendarioController extends AppController {
 
-    var $name = 'Tarefas';
+    var $name = 'Calendario';
     var $helpers = array('Javascript');
 
-     function cadastrar($id=null) {
+    function cadastrar($id=null) {
         if(!empty($this->data)) {
             if($this->Materia->save($this->data))
                 $this->Session->setFlash("Arquivo cadastrado com sucesso!");
@@ -12,8 +12,7 @@ class TarefasController extends AppController {
     }
 
     function index() {
-        
-    }
 
+    }
 }
 ?>

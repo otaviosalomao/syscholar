@@ -8,7 +8,7 @@ class UsersController extends AppController {
     function beforeFilter() {
         $this->_autenticacao();
         parent::beforeFilter();        
-        $this->Auth->allow('login', 'cadastrar', 'logout', 'cadastrar_grupo');        
+        $this->Auth->allow('login', 'cadastrar', 'logout');        
     }
 
     function login() {        
@@ -29,13 +29,17 @@ class UsersController extends AppController {
                 $this->Auth->login($this->data);
                 $this->redirect($this->Auth->redirect());
             }
-
             else
                 $this->Session->setFlash("Cadastro não realizado");
-        }
-        $this->Session->setFlash("senha incorreta!");
+        }               
+    }
 
-    }  
+    function editar($id) {
+        $usuario = $this->User->findById($id);
+        if(!empty($usuario)) {
+            $this->data = $usuario;
+        }
+    }
 
 }
 ?>
