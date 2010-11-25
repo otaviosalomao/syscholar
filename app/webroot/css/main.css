@@ -120,7 +120,7 @@ OTHERS
 .msg.warning {background:url("../images/ico-warning.gif") 10px 50% no-repeat;}
 .msg.info {background:url("../images/ico-info.gif") 10px 50% no-repeat;}
 .msg.done {background:url("../images/ico-done.gif") 10px 50% no-repeat;}
-.msg.error {background:url("../images/ico-delete.gif") 10px 50% no-repeat;}
+.error-message {background:url("../images/ico-delete.gif") 10px 50% no-repeat; display: inline; padding:10px; padding-left:35px;}
 
 /* =============================================================================
 FONT STYLES
