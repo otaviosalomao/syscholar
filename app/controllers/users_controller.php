@@ -12,7 +12,7 @@ class UsersController extends AppController {
     }
 
     function login() {        
-        $this->layout = '_login';
+        $this->layout = 'default';
     }
 
     function logout() {        

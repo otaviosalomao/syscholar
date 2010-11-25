@@ -13,7 +13,7 @@
         <div id="main">
             <div id="tray" class="box">
                 <p class="f-left box">
-                    <strong>SYSCHOLAR</strong>
+                    <strong>SYSCHOLAR - Sistema de apoio ao estudante</strong>
                 </p>
                 <?$usuario = $this->Session->read('Auth.User')?>
                 <?if(!empty($usuario)) {?>
@@ -45,7 +45,7 @@
             <div id="cols" class="box">
                 <div id="aside" class="box">
                     <div class="padding box">
-                        <p id="logo"><a href="#"><img src="/images/logo.gif" alt="Our logo" title="Visit Site"></a></p>
+                        <p id="logo"><a href="/home"><img src="/images/estudante.jpg" alt="Our logo" title="Visit Site"></a></p>
                     </div>
                 </div>
                 <div id="content" class="box">
