@@ -1,21 +1,34 @@
-<h3 class="tit">Materias</h3>
+<h3 class="tit">Trabalhos</h3>
 <div class="tabs box">
     <ul class="ui-tabs-nav">
-        <li class="ui-tabs-selected"><a href="#tab01"><span>Listar Materias</span></a></li>
-        <li class=""><a href="#tab02"><span>Cadastrar Materia</span></a></li>
+        <li class="ui-tabs-selected"><a href="/trabalhos"><span>Listar Trabalhos</span></a></li>
+        <li class=""><a href="/trabalhos/cadastrar"><span>Cadastrar Trabalho</span></a></li>
     </ul>
 </div>
-<div id="tab01" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-</div><div id="tab02" class="ui-tabs-panel" style="min-width: 0px; ">
-
-    <p>Donec ornare, libero vitae facilisis molestie, mi sapien venenatis felis, sed mattis lectus nisi ac massa.</p>
-
-</div>
-<div id="tab03" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
-
-    <p>Nam ut lorem eu orci placerat iaculis.</p>
-
-</div>
+<?= $session->flash() ?><br/>
+<? if (!empty($trabalhos)) {
+ ?>
+    <table>
+        <tr>
+            <td>Assunto</td>
+            <td>Materia</td>
+            <td>Nota</td>
+            <td>Data</td>
+            <td>Descricao</td>
+            <td>acoes</td>
+        </tr>
+<? foreach ($trabalhos as $trabalho) { ?>
+    <tr>
+        <td><?= $trabalho['Trabalho']['assunto'] ?></td>
+        <td><?= $trabalho['Materia']['nome'] ?></td>
+        <td><?= $trabalho['Trabalho']['nota'] ?></td>
+        <td><?= date('d/m/Y', strtotime($trabalho['Trabalho']['data'])) ?></td>
+        <td><?= $trabalho['Trabalho']['descricao'] ?></td>
+        <td>
+            <?= $html->link('editar', array('action'=> 'editar', 'controller'=>'trabalhos', $trabalho['Trabalho']['id'])); ?>
+            <?= $html->link('excluir', array('action'=> 'excluir', 'controller'=>'trabalhos', $trabalho['Trabalho']['id']), null, 'deseja realmente excluir essa Trabalho?'); ?>
+        </td>
+    </tr>
+<? } ?>
+    </table>
+<? } ?>

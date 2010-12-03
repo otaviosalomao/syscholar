@@ -20,7 +20,7 @@
     <?= $form->input('ano', array('type' => 'text', 'class'=>'width-30')); ?><br/>
     <?= $form->button('Enviar', array('type' => 'submit', 'class' => 'input-submit')); ?>
 </div>
-<?= $javascript->link(array('jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2', 'jquery.validate')); ?>
+<?= $javascript->link(array('jquery', 'jquery.maskedinput-1.2.2',)); ?>
 <script type="text/javascript">
     jQuery.noConflict();
     jQuery(document).ready(function() {

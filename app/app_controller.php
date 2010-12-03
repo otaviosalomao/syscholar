@@ -16,5 +16,12 @@ class AppController extends Controller {
         $this->Auth->authError = 'Você precisa estar logado para ter acesso';
         $this->Auth->loginError = 'E-mail ou senha inválida';
     }
+
+    function converteData($data) {
+        $data = explode('/', $data);
+        $data = $data[2] . $data[1] . $data[0];
+        return date('Y-m-d', strtotime($data));
+    }
+
 }
 ?>

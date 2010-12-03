@@ -1,21 +1,34 @@
 <h3 class="tit">Arquivos</h3>
 <div class="tabs box">
     <ul class="ui-tabs-nav">
-        <li class="ui-tabs-selected"><a href="#tab01"><span>Listar Arquivos</span></a></li>
-        <li class=""><a href="#tab02"><span>Enviar Arquivo</span></a></li>
+        <li class="ui-tabs-selected"><a href="/Arquivos"><span>Listar Arquivos</span></a></li>
+        <li class=""><a href="/Arquivos/cadastrar"><span>Cadastrar Arquivo</span></a></li>
     </ul>
 </div>
-<div id="tab01" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-</div><div id="tab02" class="ui-tabs-panel" style="min-width: 0px; ">
-
-    <p>Donec ornare, libero vitae facilisis molestie, mi sapien venenatis felis, sed mattis lectus nisi ac massa.</p>
-
-</div>
-<div id="tab03" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
-
-    <p>Nam ut lorem eu orci placerat iaculis.</p>
-
-</div>
+<?= $session->flash() ?><br/>
+<? if (!empty($arquivos)) {
+ ?>
+    <table>
+        <tr>
+            <td></td>
+            <td>Nome</td>
+            <td>data</td>
+            <td>Observação</td>
+        </tr>
+<? foreach ($arquivos as $arquivo) { ?>
+    <tr>
+        <td>
+            <?= $html->image('/images/download_icon.png',
+                array('Download', 'url'=>'/files/arquivos/'.$arquivo['User']['id'].'/'.$arquivo['Arquivo']['arquivo']))?>
+        </td>
+        <td><?= $arquivo['Arquivo']['nome'] ?></td>
+        <td><?= date('d/m/Y H:i:s', strtotime($arquivo['Arquivo']['data'])) ?></td>
+        <td><?= $arquivo['Arquivo']['observacao'] ?></td>
+        <td>
+            <?= $html->link('editar', array('action'=> 'editar', 'controller'=>'Arquivos', $arquivo['Arquivo']['id'])); ?>
+            <?= $html->link('excluir', array('action'=> 'excluir', 'controller'=>'Arquivos', $arquivo['Arquivo']['id']), null, 'deseja realmente excluir essa Arquivo?'); ?>
+        </td>
+    </tr>
+<? } ?>
+    </table>
+<? } ?>

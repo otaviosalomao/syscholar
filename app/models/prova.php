@@ -1,9 +1,7 @@
 <?php
 class Prova extends AppModel {
 	var $name = 'Prova';
-	var $displayField = 'nome';
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
+	var $displayField = 'nome';        
 	var $belongsTo = array(
 		'Materia' => array(
 			'className' => 'Materia',
@@ -11,7 +9,8 @@ class Prova extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
-	);
+		),
+                'User'
+                );
 }
 ?>

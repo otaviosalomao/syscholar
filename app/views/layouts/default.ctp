@@ -35,8 +35,7 @@
                     <li><a href="/provas"><span>PROVAS</span></a></li>
                     <li><a href="/arquivos"><span>ARQUIVOS</span></a></li>
                     <li><a href="/trabalhos"><span>TRABALHOS</span></a></li>
-                    <li><a href="/compromissos"><span>COMPROMISSOS</span></a></li>
-                    <li><a href="/tarefas"><span>TAREFAS</span></a></li>
+                    <li><a href="/compromissos"><span>COMPROMISSOS</span></a></li>                    
                 </ul>
                     <?}?>
             </div>

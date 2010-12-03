@@ -12,7 +12,7 @@
         <?= $form->input('nota', array('type'=>'text', 'class' => 'width-40')); ?>
         <?= $form->input('data', array('type'=>'text', 'class' => 'width-70')); ?>
         <?= $form->input('horario', array('type'=>'text', 'class' => 'width-40')); ?><br/>
-        <?= $form->button('Enviar',array('type' => 'submit', 'class'=>'input-submit')); ?>
+        <?= $form->button('Salvar',array('type' => 'submit', 'class'=>'input-submit')); ?>
 </div>
 <?= $javascript->link(array('jquery', 'jquery.autocomplete', 'jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
 <script type="text/javascript">

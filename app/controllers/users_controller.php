@@ -24,6 +24,7 @@ class UsersController extends AppController {
         $this->Session = new SessionComponent();
         if(!empty($this->data)) {            
             $this->data['User']['group_id'] = 2;
+            $this->data['User']['data_nascimento'] = date('Y-m-d', strtotime($this->converteData($this->data['User']['data_nascimento'])));            
             if($this->User->save($this->data)) {
                 $this->Session->setFlash("Cadastro realizado com sucesso");
                 $this->Auth->login($this->data);
@@ -38,6 +39,7 @@ class UsersController extends AppController {
         $usuario = $this->User->findById($id);
         if(!empty($usuario)) {
             $this->data = $usuario;
+            $this->data['User']['data_nascimento']= date('d/m/Y', strtotime($usuario['User']['data_nascimento']));
         }
     }
 

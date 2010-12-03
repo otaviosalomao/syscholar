@@ -12,7 +12,8 @@ class MateriasController extends AppController {
     }
 
     function cadastrar($id=null) {
-        if (!empty($this->data)) {            
+        if (!empty($this->data)) {
+            $this->data['Materia']['user_id'] = $this->Session->read('Auth.User.id');
             if ($this->Materia->save($this->data))
                 $this->Session->setFlash("Materia cadastrada com sucesso!");
                 $this->redirect(array('controller'=>'materias', 'action'=>'index'));
@@ -20,7 +21,7 @@ class MateriasController extends AppController {
     }
 
     function index() {
-        $materias = $this->Materia->find('all');
+        $materias = $this->Materia->find('all',array('conditions'=> array('Materia.user_id'=> $this->Session->read('Auth.User.id'))));
         $this->set('materias', $materias);
     }
 

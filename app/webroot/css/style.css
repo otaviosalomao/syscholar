@@ -78,6 +78,10 @@ OTHERS
 .width-60{width:60px}
 .width-70{width:70px}
 .width-80{width:80px}
+.width-90{width:90px}
+.width-100{width:100px}
+.width-110{width:110px}
+.width-120{width:120px}
 
 /* =============================================================================
 MESSAGES
@@ -87,7 +91,7 @@ MESSAGES
 .msg.warning a {color:#df0000;} .msg.warning a:hover, .msg.warning a:active, .msg.warning a:focus {color:#303030;}
 .msg.info {border:2px solid #B8E2FB; background-color:#E8F6FF;}
 #flashMessage {border:2px solid #BBDF8D; background-color:#EAF7D9;}
-.error-message {border:2px solid #FFAEAE; background-color:#FEEBEB;}
+.error-message {padding: 1px 0 0 30px; float: right; border:2px solid #FFAEAE; background-color:#FEEBEB;}
 .btn-excluir  {background:url("../images/ico-delete.gif"); width: 22px}
 .btn-editar   {background:url("../images/ico-done.gif"); width: 22px}
 
@@ -125,4 +129,9 @@ MESSAGES
 
 .box {
     padding: 0
+}
+
+.text-area {
+    margin: 7px;
+    padding: 5px;
 }

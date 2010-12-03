@@ -6,27 +6,25 @@
     </ul>
 </div>
 <?= $session->flash() ?><br/>
-<? if (!empty($materias)) {
+<? if (!empty($provas)) {
  ?>
     <table>
         <tr>
-            <td>Nome</td>
-            <td>Professor</td>
-            <td>Curso</td>
-            <td>Ano</td>
-            <td>Tipo</td>
+            <td>Materia</td>
+            <td>Nota</td>
+            <td>Data</td>
+            <td>Horario</td>
             <td>acoes</td>
         </tr>
-<? foreach ($materias as $materia) { ?>
+<? foreach ($provas as $prova) { ?>
     <tr>
-        <td><?= $materia['Materia']['nome'] ?></td>
-        <td><?= $materia['Materia']['professor'] ?></td>
-        <td><?= $materia['Materia']['curso'] ?></td>
-        <td><?= $materia['Materia']['ano'] ?></td>
-        <td><?= $paginas->tiposMaterias($materia['Materia']['tipo']) ?></td>
+        <td><?= $prova['Materia']['nome'] ?></td>
+        <td><?= $prova['Prova']['nota'] ?></td>
+        <td><?= date('d/m/Y', strtotime($prova['Prova']['data'])) ?></td>
+        <td><?= date('H:i', strtotime($prova['Prova']['data'])) ?></td>
         <td>
-            <?= $html->link('editar', array('action'=> 'editar', 'controller'=>'materias', $materia['Materia']['id'])); ?>
-            <?= $html->link('excluir', array('action'=> 'excluir', 'controller'=>'materias', $materia['Materia']['id']), null, 'deseja realmente excluir essa materia?'); ?>
+            <?= $html->link('editar', array('action'=> 'editar', 'controller'=>'provas', $prova['Prova']['id'])); ?>
+            <?= $html->link('excluir', array('action'=> 'excluir', 'controller'=>'provas', $prova['Prova']['id']), null, 'deseja realmente excluir essa prova?'); ?>
         </td>
     </tr>
 <? } ?>

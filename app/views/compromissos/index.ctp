@@ -1,21 +1,32 @@
 <h3 class="tit">Compromissos</h3>
 <div class="tabs box">
     <ul class="ui-tabs-nav">
-        <li class="ui-tabs-selected"><a href="#tab01"><span>Listar Compromissos</span></a></li>
-        <li class=""><a href="#tab02"><span>Cadastrar Compromisso</span></a></li>
+        <li class="ui-tabs-selected"><a href="/compromissos"><span>Listar Compromissos</span></a></li>
+        <li class=""><a href="/compromissos/cadastrar"><span>Cadastrar Compromisso</span></a></li>
     </ul>
 </div>
-<div id="tab01" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-</div><div id="tab02" class="ui-tabs-panel" style="min-width: 0px; ">
-
-    <p>Donec ornare, libero vitae facilisis molestie, mi sapien venenatis felis, sed mattis lectus nisi ac massa.</p>
-
-</div>
-<div id="tab03" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
-
-    <p>Nam ut lorem eu orci placerat iaculis.</p>
-
-</div>
+<?= $session->flash() ?><br/>
+<? if (!empty($compromissos)) {
+ ?>
+    <table>
+        <tr>
+            <td>Local</td>
+            <td>Observacao</td>
+            <td>Data</td>
+            <td>Horario</td>
+            <td>acoes</td>
+        </tr>
+<? foreach ($compromissos as $compromisso) { ?>
+    <tr>
+        <td><?= $compromisso['Compromisso']['local'] ?></td>
+        <td><?= $compromisso['Compromisso']['observacao'] ?></td>
+        <td><?= date('d/m/Y', strtotime($compromisso['Compromisso']['data'])) ?></td>
+        <td><?= date('H:i', strtotime($compromisso['Compromisso']['data'])) ?></td>
+        <td>
+            <?= $html->link('editar', array('action'=> 'editar', 'controller'=>'compromissos', $compromisso['Compromisso']['id'])); ?>
+            <?= $html->link('excluir', array('action'=> 'excluir', 'controller'=>'compromissos', $compromisso['Compromisso']['id']), null, 'deseja realmente excluir essa Compromisso?'); ?>
+        </td>
+    </tr>
+<? } ?>
+    </table>
+<? } ?>
