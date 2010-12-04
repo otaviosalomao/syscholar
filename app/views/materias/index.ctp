@@ -34,5 +34,5 @@
 <? } ?>
     </table>
     <br/>
-    <div class="legenda-materia" ></div> <div>Você ainda não foi aprovado</div><br/>
+    <div class="legenda-materia" ></div> <div>Aprovado</div><br/>
 <? } ?>

@@ -59,7 +59,7 @@ class ArquivosController extends AppController {
         $this->Arquivo->id = $id;
         if (unlink('files/arquivos/'.$this->Session->read('Auth.User.id').'/'.$arquivo['Arquivo']['arquivo']) && $this->Arquivo->delete()) {
             $this->Session->setFlash("Arquivo excluido com sucesso!");
-            $this->redirect(array('controller' => 'trabalhos', 'action' => 'index'));
+            $this->redirect(array('controller' => 'arquivos', 'action' => 'index'));
         }    
     }
 

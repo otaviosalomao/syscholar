@@ -14,6 +14,11 @@ class HomeController extends AppController {
     function index() {
         $this->Session = new SessionComponent();        
         $this->layout= 'default';
+        $this->loadModel('Avaliacao');
+        $this->loadModel('Compromisso');
+        $this->set('avaliacoes', $avaliacoes = $this->Avaliacao->find('all', array('conditions'=>array('Avaliacao.data >' =>date('Y/m/d')))));
+        $this->set('compromissos', $compromissos = $this->Compromisso->find('all', array('conditions'=>array('Compromisso.data >' => date('Y/m/d')))));
+
     }
 
 }

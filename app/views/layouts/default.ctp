@@ -32,8 +32,7 @@
                 </ul>
                 <ul class="box">
                     <li><a href="/materias"><span>MATERIAS</span></a></li>               
-                    <li><a href="/arquivos"><span>ARQUIVOS</span></a></li>
-                    <li><a href="/trabalhos"><span>TRABALHOS</span></a></li>
+                    <li><a href="/arquivos"><span>ARQUIVOS</span></a></li>                    
                     <li><a href="/compromissos"><span>COMPROMISSOS</span></a></li>                    
                 </ul>
                     <?}?>
@@ -42,25 +41,7 @@
             <div id="cols" class="box">
                 <div id="aside" class="box">
                     <div class="padding box">
-                        <p id="logo"><a href="/home"><img src="/images/estudante.png" alt="Our logo" title="Visit Site"></a></p>
-                        <form action="#" method="get" id="search">
-                            <fieldset>
-                                <legend>Busca</legend>
-                                <p><input type="text" size="17" name="" class="input-text">&nbsp;<input type="submit" value="OK" class="input-submit-02"><br>                                    
-                            </fieldset>
-                        </form>
-                        <ul class="box">
-                            <li id="submenu-active"><a href="#">Active Page</a> <!-- Active -->
-                                <ul>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
+                        <p id="logo"><a href="/home"><img src="/images/estudante.png" alt="Our logo" title="Visit Site"></a></p>                        
                     </div>
                 </div>
                 <div id="content" class="box">

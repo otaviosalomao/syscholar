@@ -8,8 +8,9 @@ class PaginasHelper extends AppHelper {
 
     function verificarAvaliacaoOcorrida($data) {
         if($data<date('Y/m/d H:i'))
-            return "<tr class='avaliacao-ocorrida'>";
-        return "<tr>";
+            return "class='avaliacao-ocorrida'";
+        else
+            return '';
     }
 
     function calcularMediaMateria($id) {
@@ -28,7 +29,7 @@ class PaginasHelper extends AppHelper {
         if($this->calcularMediaMateria($id) < $materia['Materia']['media'])
             return '';
         else
-            return "class='avaliacao-ocorrida'";
+            return "class='materia-aprovada'";
     }
 }
 ?>

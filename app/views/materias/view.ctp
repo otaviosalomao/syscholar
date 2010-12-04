@@ -17,7 +17,7 @@
             <th>Ações</th>
         </tr>
     <? foreach ($materia['Avaliacao'] as $avaliacao) { ?>
-            <?= $paginas->verificarAvaliacaoOcorrida(date('Y/m/d H:i', strtotime($avaliacao['data'])))?>
+       <tr <?= $paginas->verificarAvaliacaoOcorrida(date('Y/m/d H:i', strtotime($avaliacao['data'])))?>>
             <td><?= $avaliacao['descricao'] ?></td>            
             <td><?= date('d/m/Y', strtotime($avaliacao['data'])) ?></td>
             <td><?= date('H:i', strtotime($avaliacao['data'])) ?></td>

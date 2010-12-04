@@ -141,6 +141,11 @@ MESSAGES
 
 }
 
+.materia-aprovada td{
+    background: #BBDF8D;
+
+}
+
 .legenda-avaliacao {
     border: 1px solid;
     margin-right: 5px;
@@ -154,7 +159,7 @@ MESSAGES
     border: 1px solid;
     margin-right: 5px;
     float: left;
-    background: #FEEBEB;
+    background: #BBDF8D;
     width: 15px;
     height: 15px;
 }
