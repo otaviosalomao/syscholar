@@ -31,8 +31,7 @@
                     <li><a href="/calendario"><span><strong>Calendario</strong></span></a></li>
                 </ul>
                 <ul class="box">
-                    <li><a href="/materias"><span>MATERIAS</span></a></li>
-                    <li><a href="/provas"><span>PROVAS</span></a></li>
+                    <li><a href="/materias"><span>MATERIAS</span></a></li>               
                     <li><a href="/arquivos"><span>ARQUIVOS</span></a></li>
                     <li><a href="/trabalhos"><span>TRABALHOS</span></a></li>
                     <li><a href="/compromissos"><span>COMPROMISSOS</span></a></li>                    
@@ -43,7 +42,7 @@
             <div id="cols" class="box">
                 <div id="aside" class="box">
                     <div class="padding box">
-                        <p id="logo"><a href="/home"><img src="/images/estudante.jpg" alt="Our logo" title="Visit Site"></a></p>
+                        <p id="logo"><a href="/home"><img src="/images/estudante.png" alt="Our logo" title="Visit Site"></a></p>
                         <form action="#" method="get" id="search">
                             <fieldset>
                                 <legend>Busca</legend>

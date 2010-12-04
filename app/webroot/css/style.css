@@ -51,7 +51,7 @@ LAYOUT
 OTHERS
 ============================================================================= */
 
-#aside #logo img {border:1px solid #bfbfbf;}
+
 #aside #search fieldset a {color:#303030;}
 #aside #search fieldset {border:1px solid #bfbfbf;}
 #aside #search fieldset a:hover, #aside #search fieldset a:active, #aside #search fieldset a:focus {color:#df0000;}
@@ -134,4 +134,31 @@ MESSAGES
 .text-area {
     margin: 7px;
     padding: 5px;
+}
+
+.avaliacao-ocorrida td{
+    background: #FEEBEB;
+
+}
+
+.legenda-avaliacao {
+    border: 1px solid;
+    margin-right: 5px;
+    float: left;
+    background: #FEEBEB;
+    width: 15px;
+    height: 15px;    
+}
+
+.legenda-materia {
+    border: 1px solid;
+    margin-right: 5px;
+    float: left;
+    background: #FEEBEB;
+    width: 15px;
+    height: 15px;
+}
+
+.syscholar-table {
+    width: 100%
 }

@@ -17,6 +17,7 @@
         </div>
     </div>
     <?= $form->input('curso', array('type' => 'text')); ?>
+    <?= $form->input('media', array('type' => 'text','class'=>'width-40')); ?>
     <?= $form->input('ano', array('type' => 'text', 'class'=>'width-30')); ?><br/>
     <?= $form->button('Salvar', array('type' => 'submit', 'class' => 'input-submit')); ?>
 </div>

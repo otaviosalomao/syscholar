@@ -9,6 +9,7 @@
     <?= $form->create("Materia", array("action" => "cadastrar", 'class' => 'form')); ?>
     <?= $form->input('nome', array('type' => 'text')); ?>
     <?= $form->input('professor', array('type' => 'text')); ?>
+    <?= $form->input('media', array('label'=> 'Media Aprovação', 'type' => 'text', 'class'=>'width-30', 'maxLength'=> 4)); ?>
     <div class='pedido-opcoes'>
         <label>Tipo</label>
         <div class="topo">
@@ -20,9 +21,10 @@
     <?= $form->input('ano', array('type' => 'text', 'class'=>'width-30')); ?><br/>
     <?= $form->button('Enviar', array('type' => 'submit', 'class' => 'input-submit')); ?>
 </div>
-<?= $javascript->link(array('jquery', 'jquery.maskedinput-1.2.2',)); ?>
+<?= $javascript->link(array('jquery', 'jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
 <script type="text/javascript">
     jQuery.noConflict();
+    jQuery('#MateriaMedia').maskMoney({symbol:"", decimal:"."});
     jQuery(document).ready(function() {
         jQuery('#MateriaAno').mask('9999');
     });

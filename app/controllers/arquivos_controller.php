@@ -41,13 +41,14 @@ class ArquivosController extends AppController {
             if (!is_dir($caminho))
                 mkdir($caminho, 0777, true);
             if (move_uploaded_file($arquivo['tmp_name']['Arquivo']['arquivo'], $destino)) {
+                chmod ($destino, 0777);
                 $this->data['Arquivo']['arquivo'] = $this->data['Arquivo']['arquivo']['name'];
                 $this->data['Arquivo']['user_id'] = $this->Session->read('Auth.User.id');
                 if ($this->Arquivo->save($this->data))
-                    $this->Session->setFlash('<h5>Arquivo enviado com sucesso!</h5>', 'default', array('class' => 'msg-ok'));
+                    $this->Session->setFlash('Arquivo enviado com sucesso!');
             }
             else
-                $this->Session->setFlash('<h5>Erro ao enviar o arquivo!</h5>', 'default', array('class' => 'msg-erro'));
+                $this->Session->setFlash('Erro ao enviar o arquivo!');
             $this->redirect('/arquivos');
         }
     }

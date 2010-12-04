@@ -10,10 +10,11 @@
  ?>
     <table>
         <tr>
-            <td></td>
-            <td>Nome</td>
-            <td>data</td>
-            <td>Observação</td>
+            <th></th>
+            <th>Nome</th>
+            <th>data</th>
+            <th>Observação</th>
+            <th>Ações</th>
         </tr>
 <? foreach ($arquivos as $arquivo) { ?>
     <tr>

@@ -39,6 +39,11 @@ class MateriasController extends AppController {
         $this->data = $materia;
     }
 
+    function view($id){
+        $materia = $this->Materia->find('first', array('conditions'=>array('Materia.id'=>$id)));
+        $this->set('materia', $materia);
+    }
+
 }
 
 ?>

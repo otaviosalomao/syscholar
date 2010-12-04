@@ -10,12 +10,12 @@
  ?>
     <table>
         <tr>
-            <td>Assunto</td>
-            <td>Materia</td>
-            <td>Nota</td>
-            <td>Data</td>
-            <td>Descricao</td>
-            <td>acoes</td>
+            <th>Assunto</th>
+            <th>Materia</th>
+            <th>Nota</th>
+            <th>Data</th>
+            <th>Descricao</th>
+            <th>Ações</th>
         </tr>
 <? foreach ($trabalhos as $trabalho) { ?>
     <tr>

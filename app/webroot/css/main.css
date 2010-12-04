@@ -82,7 +82,7 @@ OTHERS
 
 #aside .padding {padding-left:15px;}
 #aside #logo {margin:0 0 15px 0;}
-#aside #logo img {display:block; width:200px;}
+#aside #logo img {padding: 45px; display:block; width:120px;}
 #aside #search fieldset {padding:7px 10px;}
 #aside #search fieldset p {margin:0;}
 #aside #search fieldset legend {font-weight:bold;}

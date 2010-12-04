@@ -10,11 +10,11 @@
  ?>
     <table>
         <tr>
-            <td>Local</td>
-            <td>Observacao</td>
-            <td>Data</td>
-            <td>Horario</td>
-            <td>acoes</td>
+            <th>Local</th>
+            <th>Observacao</th>
+            <th>Data</th>
+            <th>Horario</th>
+            <th>Ações</th>
         </tr>
 <? foreach ($compromissos as $compromisso) { ?>
     <tr>
