@@ -20,6 +20,7 @@
     <?= $form->input('media', array('type' => 'text','class'=>'width-40')); ?>
     <?= $form->input('ano', array('type' => 'text', 'class'=>'width-30')); ?><br/>
     <?= $form->button('Salvar', array('type' => 'submit', 'class' => 'input-submit')); ?>
+     <input class="input-submit" type="button" value="Cancelar" onClick="window.location='/materias'"/>
 </div>
 <?= $javascript->link(array('jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2', 'jquery.validate')); ?>
 <script type="text/javascript">

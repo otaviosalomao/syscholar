@@ -43,6 +43,11 @@ class CompromissosController extends AppController {
 
         }
 
+        function view($id) {
+            $compromisso = $this->Compromisso->findById($id);
+            $this->set('compromisso', $compromisso);
+        }
+
 }
 
 ?>

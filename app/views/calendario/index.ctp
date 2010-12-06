@@ -1,21 +1,37 @@
 <h3 class="tit">Calendario</h3>
-<div class="tabs box">
-    <ul class="ui-tabs-nav">
-        <li class="ui-tabs-selected"><a href="#tab01"><span>Visualizar Calendario</span></a></li>
-        <li class=""><a href="#tab02"><span>Cadastrar Prova</span></a></li>
-    </ul>
-</div>
-<div id="tab01" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
+<?
+$calendario = '';
+foreach ($compromissos as $compromisso) {
+    $calendario[] = array('id' => $compromisso['Compromisso']['id'],
+        'start' => $compromisso['Compromisso']['data'],
+        'url' => '/compromissos/view/'.$compromisso['Compromisso']['id'],
+        'className' => 'compromisso',
+        'title' => $compromisso['Compromisso']['resumo']);
+}
+?>
+<?= $html->css(array('fullcalendar')) ?>
+<?= $javascript->link(array('jquery-1.3.2.min', 'fullcalendar')); ?>
+    <div id='calendar'></div>
+    <script type='text/javascript'>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        jQuery.noConflict();
 
-</div><div id="tab02" class="ui-tabs-panel" style="min-width: 0px; ">
+        jQuery(document).ready(function() {
 
-    <p>Donec ornare, libero vitae facilisis molestie, mi sapien venenatis felis, sed mattis lectus nisi ac massa.</p>
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
 
-</div>
-<div id="tab03" class="ui-tabs-panel ui-tabs-hide" style="min-width: 0px; ">
+            jQuery('#calendar').fullCalendar({
 
-    <p>Nam ut lorem eu orci placerat iaculis.</p>
-
-</div>
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                editable: false,
+                events: <?= json_encode($calendario); ?>
+        });
+    });
+</script>

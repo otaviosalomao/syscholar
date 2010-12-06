@@ -36,3 +36,4 @@
     <br/>
     <div class="legenda-materia" ></div> <div>Aprovado</div><br/>
 <? } ?>
+ <input class="input-submit" type="button" value="Voltar" onClick="window.location='/'"/>

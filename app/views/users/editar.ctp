@@ -14,6 +14,7 @@
         </div>
     </div>
     <?= $form->button('Salvar',array('type' => 'submit', 'class'=>'input-submit')); ?>
+     <input class="input-submit" type="button" value="Cancelar" onClick="window.location='/'"/>
 </div>
 <?= $javascript->link(array('jquery', 'jquery.maskedinput-1.2.2')); ?>
 <script type="text/javascript">

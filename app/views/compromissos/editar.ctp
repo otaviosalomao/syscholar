@@ -8,6 +8,7 @@
 </div>
 <div id="form-area" class="cadastrar">
         <?= $form->create("Compromisso", array("action" => "cadastrar", 'class' => 'form')); ?>
+        <?= $form->input('resumo', array('type'=>'text')); ?>
         <?= $form->input('local', array('div' => false)); ?>
         <?= $form->input('data', array('type'=>'text', 'class' => 'width-70')); ?>
         <?= $form->input('horario', array('type'=>'text', 'class' => 'width-40')); ?>

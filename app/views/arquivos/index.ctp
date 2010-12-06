@@ -33,3 +33,5 @@
 <? } ?>
     </table>
 <? } ?>
+<br/>
+<input class="input-submit" type="button" value="Voltar" onClick="window.location='/'"/>

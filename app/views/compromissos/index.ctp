@@ -10,16 +10,16 @@
  ?>
     <table>
         <tr>
+            <th>Resumo</th>
             <th>Local</th>
-            <th>Observacao</th>
             <th>Data</th>
             <th>Horario</th>
             <th>Ações</th>
         </tr>
 <? foreach ($compromissos as $compromisso) { ?>
     <tr>
-        <td><?= $compromisso['Compromisso']['local'] ?></td>
-        <td><?= $compromisso['Compromisso']['observacao'] ?></td>
+        <td><?= $html->link($compromisso['Compromisso']['resumo'], array('action'=> 'view', 'controller'=>'compromissos', $compromisso['Compromisso']['id'])); ?></td>
+        <td><?= $compromisso['Compromisso']['local'] ?></td>        
         <td><?= date('d/m/Y', strtotime($compromisso['Compromisso']['data'])) ?></td>
         <td><?= date('H:i', strtotime($compromisso['Compromisso']['data'])) ?></td>
         <td>
@@ -30,3 +30,5 @@
 <? } ?>
     </table>
 <? } ?>
+<br/>
+<input class="input-submit" type="button" value="Voltar" onClick="window.location='/'"/>

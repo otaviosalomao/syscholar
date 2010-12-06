@@ -3,7 +3,14 @@ class CalendarioController extends AppController {
 
     var $name = 'Calendario';
     var $helpers = array('Javascript');
-    var $uses = array('Trabalho', 'Prova', 'Compromisso', 'Tarefas');
+    var $uses = array('Trabalho', 'Compromisso');
+
+      function beforeFilter() {
+        $this->Session = new SessionComponent();
+        $this->_autenticacao();
+        parent::beforeFilter();
+    }
+
 
     function cadastrar($id=null) {
         if(!empty($this->data)) {
@@ -13,7 +20,8 @@ class CalendarioController extends AppController {
     }
 
     function index() {
-
+        $compromissos = $this->Compromisso->find('all', array('conditions' => array('Compromisso.user_id' => $this->Session->read('Auth.User.id'))));
+        $this->set('compromissos', $compromissos);
     }
 }
 ?>
