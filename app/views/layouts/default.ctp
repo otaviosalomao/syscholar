@@ -6,10 +6,19 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="en" />
         <meta name="robots" content="noindex,nofollow" />
-        <?= $html->css(array('reset', 'main', '2col', 'main-ie6','syscholar', 'style'));?>       
+        <?= $html->css(array('reset', 'main', '2col', 'main-ie6','syscholar', 'style'));?>
+        <?= $javascript->link(array('jquery.translate-1.3.9', 'jquery.cookie', 'jquery-1.3.2.min')); ?>         
     </head>
     <body>
         <div id="main">
+            <div id="idiomas">
+                    <?= $html->image('br.png', array(
+                        'id' => 'pt', 'title' => 'Português', 'onClick' => 'originalLanguage()')); ?>
+                    <?= $html->image('us.png', array(
+                        'id' => 'en', 'title' => 'English', 'onClick' => 'translateTo(this.id)')); ?>
+                    <?= $html->image('es.png', array(
+                        'id' => 'es', 'title' => 'Español', 'onClick' => 'translateTo(this.id)')); ?>
+                </div>
             <div id="tray" class="box">
                 <p class="f-left box">
                     <strong>SYSCHOLAR - Sistema de apoio ao estudante</strong>
@@ -56,3 +65,21 @@
         </div>
     </body>
 </html>
+<?= $javascript->link(array('jquery.translate-1.3.9', 'jquery.cookie', 'jquery-1.3.2.min')); ?>
+<script type="text/javascript">
+    jQuery(document).ready(function() {        
+        if (jQuery.cookie('destLang') != null) {
+            translateTo(jQuery.cookie('destLang'));
+        }
+    });
+    function translateTo(data) {
+        jQuery("body").translate(data, {
+            fromOriginal: true
+        });
+        jQuery.cookie('destLang', data, {path: '/'});
+    }
+    function originalLanguage() {
+        jQuery.cookie('destLang', null, {path: '/'});
+        window.location.reload();
+    }
+</script>
