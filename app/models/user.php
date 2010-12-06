@@ -3,7 +3,7 @@ class User extends AppModel {
     var $name = 'User';
     var $displayField = 'nome';
     var $belongsTo = array('Group');
-    var $hasMany = array('Arquivo');
+    var $hasMany = array('Arquivo', 'Materia', 'Avaliacao', 'Compromisso');
     var $actsAs = array('Acl' => 'requester');
 
      var $validate = array(

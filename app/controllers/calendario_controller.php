@@ -20,8 +20,13 @@ class CalendarioController extends AppController {
     }
 
     function index() {
-        $compromissos = $this->Compromisso->find('all', array('conditions' => array('Compromisso.user_id' => $this->Session->read('Auth.User.id'))));
-        $this->set('compromissos', $compromissos);
+//        $compromissos = $this->Compromisso->find('all', array('conditions' => array('Compromisso.user_id' => $this->Session->read('Auth.User.id'))));
+//        $this->set('compromissos', $compromissos);
+//        $avaliacoes = $this->Avaliacao->find('all', array('conditions' => array('Avaliacao.user_id' => $this->Session->read('Auth.User.id'))));
+//        $this->set('avaliacoes', $avaliacoes);
+          $this->loadModel('User');
+          $usuario = $this->User->findById($this->Session->read('Auth.User.id'));
+          $this->set('usuario', $usuario);
     }
 }
 ?>
