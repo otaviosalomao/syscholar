@@ -12,25 +12,13 @@
         <input class="input-submit" type="button" value="Cancelar" onClick="window.location='/materias/view/<?= $this->data['Materia']['id']?>'"/>
         
 </div>
-<?= $javascript->link(array('jquery', 'jquery.autocomplete', 'jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
+<?= $javascript->link(array('jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
 <script type="text/javascript">
     jQuery.noConflict();
     jQuery(document).ready(function() {        
         jQuery('#AvaliacaoNota').maskMoney({symbol:"", decimal:","});
         jQuery('#AvaliacaoData').mask('99/99/9999');
-        jQuery('#AvaliacaoHorario').mask('99:99');
-        // Lookup na tabela de Materias
-        jQuery.getJSON('/lookup/listarMaterias', function(data) {
-            jQuery('#ProvaMateria').autocomplete(data, {
-                matchContains: true,
-                highlightItem: false,
-                formatItem: function(row, i, max, term) {
-                    return row.to + "";
-                },
-                formatResult: function(row) {
-                    return row.to + "";
-                }
-            });
-        });
+        jQuery('#AvaliacaoHorario').mask('99:99');     
+        
     });
 </script>

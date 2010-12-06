@@ -7,16 +7,16 @@
         <meta http-equiv="content-language" content="en" />
         <meta name="robots" content="noindex,nofollow" />
         <?= $html->css(array('reset', 'main', '2col', 'main-ie6','syscholar', 'style'));?>
-        <?= $javascript->link(array('jquery.translate-1.3.9', 'jquery.cookie', 'jquery-1.3.2.min')); ?>         
+        <?= $javascript->link(array('jquery-1.3.2.min', 'jquery.translate-1.3.9', 'jquery.cookie')); ?>
     </head>
     <body>
         <div id="main">
             <div id="idiomas">
-                    <?= $html->image('br.png', array(
+                    <?= $html->image('/images/br.png', array(
                         'id' => 'pt', 'title' => 'Português', 'onClick' => 'originalLanguage()')); ?>
-                    <?= $html->image('us.png', array(
+                    <?= $html->image('/images/us.png', array(
                         'id' => 'en', 'title' => 'English', 'onClick' => 'translateTo(this.id)')); ?>
-                    <?= $html->image('es.png', array(
+                    <?= $html->image('/images/es.png', array(
                         'id' => 'es', 'title' => 'Español', 'onClick' => 'translateTo(this.id)')); ?>
                 </div>
             <div id="tray" class="box">
@@ -65,7 +65,7 @@
         </div>
     </body>
 </html>
-<?= $javascript->link(array('jquery.translate-1.3.9', 'jquery.cookie', 'jquery-1.3.2.min')); ?>
+
 <script type="text/javascript">
     jQuery(document).ready(function() {        
         if (jQuery.cookie('destLang') != null) {
@@ -74,6 +74,7 @@
     });
     function translateTo(data) {
         jQuery("body").translate(data, {
+            not:"#UserLoginForm",
             fromOriginal: true
         });
         jQuery.cookie('destLang', data, {path: '/'});

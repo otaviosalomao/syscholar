@@ -16,9 +16,10 @@
     <?= $form->input('senha', array('type' => 'password', 'class'=>'text', 'class' => 'width-70', 'minlenght' => 6)); ?>
     <?= $form->input('confirmar_senha', array('type' => 'password', 'class'=>'text', 'class' => 'width-70', 'minlenght' => 6)); ?> <br/>
     <?= $form->button('Cadastrar',array('type' => 'submit', 'class'=>'input-submit')); ?>
+    <input class="input-submit" type="button" value="Voltar" onClick="window.location='/'"/>
 </div>
 
-<?= $javascript->link(array('jquery', 'jquery.maskedinput-1.2.2')); ?>
+<?= $javascript->link(array('jquery.maskedinput-1.2.2')); ?>
 <script type="text/javascript">
     jQuery.noConflict();
     jQuery(document).ready(function() {

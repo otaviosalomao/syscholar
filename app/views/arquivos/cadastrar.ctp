@@ -13,4 +13,5 @@
         <?= $form->input('arquivo', array('type'=>'file')); ?><br/>
         <?= $form->input('observacao', array('type'=>'textarea', 'class'=> 'text-area')); ?>
         <?= $form->button('Enviar',array('type' => 'submit', 'class'=>'input-submit')); ?>
+        <input class="input-submit" type="button" value="Voltar" onClick="window.location='/arquivos'"/>
 </div>

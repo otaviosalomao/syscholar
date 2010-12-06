@@ -10,7 +10,7 @@
         <?= $form->button('Enviar',array('type' => 'submit', 'class'=>'input-submit')); ?>
         <input class="input-submit" type="button" value="Cancelar" onClick="window.location='/materias/view/<?= $this->data['Avaliacao']['materia_id']?>'"/>
 </div>
-<?= $javascript->link(array('jquery', 'jquery.autocomplete', 'jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
+<?= $javascript->link(array('jquery.autocomplete', 'jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
 <script type="text/javascript">
     jQuery.noConflict();
     jQuery(document).ready(function() {

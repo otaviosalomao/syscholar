@@ -17,7 +17,7 @@
 }?>
 
 <?= $html->css(array('fullcalendar')) ?>
-<?= $javascript->link(array('jquery-1.3.2.min', 'fullcalendar')); ?>
+<?= $javascript->link(array('fullcalendar')); ?>
     <div id='calendar'></div>
     <script type='text/javascript'>
 

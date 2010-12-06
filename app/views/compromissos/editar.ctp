@@ -15,25 +15,12 @@
         <?= $form->input('observacao', array('type'=>'textarea', 'class' => 'text-area')); ?><br/>
         <?= $form->button('Salvar',array('type' => 'submit', 'class'=>'input-submit')); ?>
 </div>
-<?= $javascript->link(array('jquery', 'jquery.autocomplete', 'jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
+<?= $javascript->link(array('jquery.maskedinput-1.2.2', 'jquery.maskMoney.0.2')); ?>
 <script type="text/javascript">
     jQuery.noConflict();
     jQuery(document).ready(function() {
         jQuery('#CompromissoNota').maskMoney({symbol:"", decimal:","});
         jQuery('#CompromissoData').mask('99/99/9999');
         jQuery('#CompromissoHorario').mask('99:99');
-        // Lookup na tabela de Materias
-        jQuery.getJSON('/lookup/listarMaterias', function(data) {
-            jQuery('#CompromissoMateria').autocomplete(data, {
-                matchContains: true,
-                highlightItem: false,
-                formatItem: function(row, i, max, term) {
-                    return row.to + "";
-                },
-                formatResult: function(row) {
-                    return row.to + "";
-                }
-            });
-        });
     });
 </script>
