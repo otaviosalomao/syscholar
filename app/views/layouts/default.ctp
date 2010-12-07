@@ -12,12 +12,9 @@
     <body>
         <div id="main">
             <div id="idiomas">
-                    <?= $html->image('/images/br.png', array(
-                        'id' => 'pt', 'title' => 'Português', 'onClick' => 'originalLanguage()')); ?>
-                    <?= $html->image('/images/us.png', array(
-                        'id' => 'en', 'title' => 'English', 'onClick' => 'translateTo(this.id)')); ?>
-                    <?= $html->image('/images/es.png', array(
-                        'id' => 'es', 'title' => 'Español', 'onClick' => 'translateTo(this.id)')); ?>
+                    <?= $html->image('/images/br.png', array('id' => 'pt', 'title' => 'Português', 'onClick' => 'originalLanguage()')); ?>
+                    <?= $html->image('/images/us.png', array('id' => 'en', 'title' => 'English', 'onClick' => 'translateTo(this.id)')); ?>
+                    <?= $html->image('/images/es.png', array('id' => 'es', 'title' => 'Español', 'onClick' => 'translateTo(this.id)')); ?>
                 </div>
             <div id="tray" class="box">
                 <p class="f-left box">
@@ -26,14 +23,12 @@
                 <?$usuario = $this->Session->read('Auth.User')?>
                 <?if(!empty($usuario)) {?>
                 <p class="f-right">
-                    <strong><?= $usuario['nome']?></strong>&nbsp;
-                    | <a href=<?= "/users/editar/".$usuario['id']?>>editar perfil</a>&nbsp;
-                    | <a href="/users/logout" id="logout">sair</a>
+                    <strong><?= $usuario['nome']?></strong>&nbsp;| <a href=<?= "/users/editar/".$usuario['id']?>>editar perfil</a>&nbsp;| <a href="/users/logout" id="logout">sair</a>
                 </p>
                     <?} else
                     include ('_login.ctp');?>
             </div>
-            <hr class="noscreen">
+            <hr class="noscreen"/>
             <div id="menu" class="box">
                 <?if(!empty($usuario)) {?>
                 <ul class="box f-right">
@@ -46,28 +41,25 @@
                 </ul>
                     <?}?>
             </div>
-            <hr class="noscreen">
+            <hr class="noscreen"/>
             <div id="cols" class="box">
                 <div id="aside" class="box">
                     <div class="padding box">
-                        <p id="logo"><a href="/home"><img src="/images/estudante.png" alt="Our logo" title="Visit Site"></a></p>                        
+                        <p id="logo"><a href="/home"><img src="/images/estudante.png" alt="Our logo" title="Visit Site"/></a></p>
                     </div>
                 </div>
                 <div id="content" class="box">
                     <?= $content_for_layout ?>
                 </div>
-                <hr class="noscreen">
+                <hr class="noscreen"/>
             </div>
             <div id="footer" class="box">
 
             </div>
 
         </div>
-    </body>
-</html>
-
-<script type="text/javascript">
-    jQuery(document).ready(function() {        
+        <script type="text/javascript">
+    jQuery(document).ready(function() {
         if (jQuery.cookie('destLang') != null) {
             translateTo(jQuery.cookie('destLang'));
         }
@@ -84,3 +76,6 @@
         window.location.reload();
     }
 </script>
+    </body>
+</html>
+
