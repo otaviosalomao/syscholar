@@ -11,4 +11,31 @@ Ferramentas utilizadas:
 	Cake-php
 	MySql
 	
-	
+Para que o sistema possa rodar no linux é preciso seguir os seguintes passos:
+
+
+1 - adicionar no virtual host do apache (/etc/apache2/sites-enable/000-default) a seguinte configuração:
+
+	<VirtualHost *:80>
+		DocumentRoot /syscholar/app/webroot
+		ServerName endereco_de_acesso_do_sitema
+	<VirtualHost>
+
+2 - adicionar o endereco de acesso (ServerName) no hosts(/etc/hosts)
+
+	127.0.0.1 endereco_de_acesso_do_sitema
+
+
+3 - Reinicie o apache (/etc/init.d/apache2 restart)
+
+
+5 - Entre na pasta db,localizada na raiz do projeto, atraves do terminal de o seguinte comando php importar_db.php usuarioDoBanco senhaDoBanco syscholar_development
+	*Este script ira criar a estrutura do banco e irá povoalo com alguns dados para teste
+
+6 - para configurar login e senha do banco na aplicação basta acessar syscholar/app/config/ e alterar o node do arquivo "database - default.php" para "database.php", 
+	abra-o e adicione o login e senha na configuração de banco default
+
+7 - crie um pasta "tmp" dentro de syscholar/app/ e dentro dessa pasta crie outra pasta com nome de cache, dentro da pasta cache adicine duas pastas com seguintes nomes: "persistent" e "models"
+
+
+8 - abra o browser e digite http://endereco_de_acesso_do_sitema
