@@ -12,9 +12,9 @@
     <body>
         <div id="main">
             <div id="idiomas">
-                    <?= $html->image('/images/br.png', array('id' => 'pt', 'title' => 'Português', 'onClick' => 'originalLanguage()')); ?>
-                    <?= $html->image('/images/us.png', array('id' => 'en', 'title' => 'English', 'onClick' => 'translateTo(this.id)')); ?>
-                    <?= $html->image('/images/es.png', array('id' => 'es', 'title' => 'Español', 'onClick' => 'translateTo(this.id)')); ?>
+                    <?= $html->image('/images/br.png', array('id' => 'pt', 'title' => 'Português', 'onclick' => 'originalLanguage()')); ?>
+                    <?= $html->image('/images/us.png', array('id' => 'en', 'title' => 'English', 'onclick' => 'translateTo(this.id)')); ?>
+                    <?= $html->image('/images/es.png', array('id' => 'es', 'title' => 'Español', 'onclick' => 'translateTo(this.id)')); ?>
                 </div>
             <div id="tray" class="box">
                 <p class="f-left box">
@@ -23,7 +23,7 @@
                 <?$usuario = $this->Session->read('Auth.User')?>
                 <?if(!empty($usuario)) {?>
                 <p class="f-right">
-                    <strong><?= $usuario['nome']?></strong>&nbsp;| <a href=<?= "/users/editar/".$usuario['id']?>>editar perfil</a>&nbsp;| <a href="/users/logout" id="logout">sair</a>
+                    <strong><?= $usuario['nome']?></strong>&nbsp;| <a href="<?= "/users/editar/".$usuario['id']?>">editar perfil</a>&nbsp;| <a href="/users/logout" id="logout">sair</a>
                 </p>
                     <?} else
                     include ('_login.ctp');?>
