@@ -17,7 +17,7 @@ Para que o sistema possa rodar no linux é preciso seguir os seguintes passos:
 1 - adicionar no virtual host do apache (/etc/apache2/sites-enable/000-default) a seguinte configuração:
 
 	<VirtualHost *:80>
-		DocumentRoot /syscholar/app/webroot
+		DocumentRoot var/www/syscholar/app/webroot
 		ServerName endereco_de_acesso_do_sitema
 	<VirtualHost>
 
@@ -25,8 +25,11 @@ Para que o sistema possa rodar no linux é preciso seguir os seguintes passos:
 
 	127.0.0.1 endereco_de_acesso_do_sitema
 
+3 - ative o modeo rewrite do apache
+	é possivel ativar com a seguinte linha de comando sudo a2enmod rewrite
 
-3 - Reinicie o apache (/etc/init.d/apache2 restart)
+
+4 - Reinicie o apache (/etc/init.d/apache2 restart)
 
 
 5 - Entre na pasta db,localizada na raiz do projeto, atraves do terminal de o seguinte comando php importar_db.php usuarioDoBanco senhaDoBanco syscholar_development
